@@ -41,9 +41,11 @@ function App() {
       <p>{d.getDay()}</p>
       <p>{d.getFullYear()}</p>
       <input type="date" max={max} min={min} />
+      <p>{d.getTime === d.getTime ? "true" : "false"}</p>
     </div>
   );
 }
 
 export default App;
+
 
