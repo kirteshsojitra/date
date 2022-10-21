@@ -1,17 +1,15 @@
-import logo from "./logo.svg";
+import DateObject from "react-date-object";
 import "./App.css";
 
 function App() {
-  const date = new Date();
-  const day = date.getDay();
-  const month = date.getMonth();
-  const year = date.getFullYear();
+  var date = new DateObject();
+  const max = date.format("YYYY-MM-DD");
+  date.day -= 30;
+  const min = date.format("YYYY-MM-DD");
   return (
     <div className="App">
-      <h1>
-        {day}/{month}/{year}
-      </h1>
-      <input type="date" max={"2022-12-12"} min={"2022-10-21"} />
+      <h1></h1>
+      <input type="date" max={max} min={min} />
     </div>
   );
 }
